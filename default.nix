@@ -21,4 +21,6 @@ rustPlatform.buildRustPackage rec {
     wrapProgram $out/bin/${pname} \
       --prefix PATH : ${pkgs.efibootmgr}/bin
   '';
+
+  meta.mainProgram = "ha-poweroff";
 }
